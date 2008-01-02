@@ -7,6 +7,7 @@ Group:     Graphics
 Source:    http://flapjack.navi.cx/releases/fyre/%{name}-%{version}.tar.bz2
 Patch: fyre-1.0.0-datadir.patch
 URL:       http://fyre.navi.cx
+BuildRoot: %_tmppath/%name-%version-%release
 Requires(post): desktop-file-utils shared-mime-info
 Requires(postun): desktop-file-utils shared-mime-info
 BuildRequires: gtk2-devel OpenEXR-devel
