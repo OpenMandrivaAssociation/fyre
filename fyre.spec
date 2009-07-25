@@ -27,7 +27,7 @@ of high-resolution, high quality images.
 %prep
 %setup -q
 %patch -p1 -b .datadir
-%patch -p1
+%patch1 -p1
 aclocal-1.9
 autoconf
 automake-1.9
