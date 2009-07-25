@@ -1,11 +1,12 @@
 Name:      fyre
 Summary:   Explorer for iterated chaotic functions
 Version:   1.0.1
-Release:   %mkrel 6
-License:   GPL
+Release:   %mkrel 7
+License:   GPLv2+
 Group:     Graphics
 Source:    http://flapjack.navi.cx/releases/fyre/%{name}-%{version}.tar.bz2
 Patch: fyre-1.0.0-datadir.patch
+Patch1: fyre-1.0.1-format-strings.patch
 URL:       http://fyre.navi.cx
 BuildRoot: %_tmppath/%name-%version-%release
 Requires(post): desktop-file-utils shared-mime-info
@@ -26,6 +27,7 @@ of high-resolution, high quality images.
 %prep
 %setup -q
 %patch -p1 -b .datadir
+%patch -p1
 aclocal-1.9
 autoconf
 automake-1.9
