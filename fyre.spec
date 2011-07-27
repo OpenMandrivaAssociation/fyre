@@ -1,7 +1,7 @@
 Name:      fyre
 Summary:   Explorer for iterated chaotic functions
 Version:   1.0.1
-Release:   %mkrel 7
+Release:   %mkrel 8
 License:   GPLv2+
 Group:     Graphics
 Source:    http://flapjack.navi.cx/releases/fyre/%{name}-%{version}.tar.bz2
