@@ -1,0 +1,11 @@
+--- fyre-1.0.0/src/Makefile.am.datadir	2005-02-16 10:21:25.000000000 +0100
++++ fyre-1.0.0/src/Makefile.am	2006-08-15 09:52:28.000000000 +0200
+@@ -5,7 +5,7 @@
+ 	$(PACKAGE_CFLAGS)		\
+ 	$(EXR_CFLAGS)			\
+ 	$(GNET_CFLAGS)			\
+-	'-DFYRE_DATADIR="data"'		\
++	'-DFYRE_DATADIR="$(datadir)/fyre"'		\
+ 	'-DDATADIR="$(prefix)/share"'
+ 
+ fyre_LDADD = \

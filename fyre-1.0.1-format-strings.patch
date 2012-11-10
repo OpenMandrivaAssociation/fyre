@@ -1,0 +1,12 @@
+diff -p -up fyre-1.0.1/src/exr.cpp~ fyre-1.0.1/src/exr.cpp
+--- fyre-1.0.1/src/exr.cpp~	2006-01-04 01:16:52.000000000 +0100
++++ fyre-1.0.1/src/exr.cpp	2009-07-25 13:50:59.000000000 +0200
+@@ -42,7 +42,7 @@ extern "C" void exr_save_image_file(Hist
+     try {
+ 	exr_save_real (hi, filename);
+     } catch (const std::exception &exc) {
+-	GError *nerror = g_error_new (fyre_exr_error_quark(), FYRE_EXR_SAVE_FAILURE, exc.what());
++	GError *nerror = g_error_new (fyre_exr_error_quark(), FYRE_EXR_SAVE_FAILURE, "%s", exc.what());
+ 	*error = nerror;
+     }
+ }
