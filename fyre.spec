@@ -70,3 +70,50 @@ rm -rf %buildroot
 %{_datadir}/mime/packages/fyre.xml
 
 
+
+
+%changelog
+* Wed Jul 27 2011 Götz Waschk <waschk@mandriva.org> 1.0.1-8mdv2012.0
++ Revision: 691825
+- rebuild
+
+* Sat Jul 25 2009 Götz Waschk <waschk@mandriva.org> 1.0.1-7mdv2011.0
++ Revision: 399708
+- fix format strings
+- update license
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.0.1-6mdv2009.0
++ Revision: 245586
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 1.0.1-4mdv2008.1
++ Revision: 140731
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Fri Feb 09 2007 Götz Waschk <waschk@mandriva.org> 1.0.1-4mdv2007.0
++ Revision: 118561
+- rebuild
+
+* Fri Oct 13 2006 Götz Waschk <waschk@mandriva.org> 1.0.1-3mdv2006.0
++ Revision: 63849
+- rebuild
+- unpack patch
+- Import fyre
+
+* Tue Oct 10 2006 Götz Waschk <waschk@mandriva.org> 1.0.1-1mdv2007.1
+- update file list
+- New version 1.0.1
+
+* Wed Aug 16 2006 Götz Waschk <waschk@mandriva.org> 1.0.0-2mdv2007.0
+- initial mdv package
+
+* Fri Mar 04 2005 Mirco Mueller <macslow@bangang.de> 1.0.0-2
+- stupid me, I totally forgot to enable gnet2 and OpenEXR support
+
+* Thu Mar 03 2005 Mirco Mueller <macslow@bangang.de> 1.0.0-1
+- initial .spec file written for fyre-1.0.0.tar.gz
+
