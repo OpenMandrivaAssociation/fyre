@@ -12,7 +12,7 @@ BuildRoot: %_tmppath/%name-%version-%release
 Requires(post): desktop-file-utils shared-mime-info
 Requires(postun): desktop-file-utils shared-mime-info
 BuildRequires: gtk2-devel OpenEXR-devel
-BuildRequires: libglade2.0-devel
+BuildRequires: pkgconfig(libglade-2.0)
 BuildRequires: libgnet2-devel
 BuildRequires: desktop-file-utils shared-mime-info
 BuildRequires: automake1.9
