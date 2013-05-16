@@ -1,7 +1,7 @@
 Name:      fyre
 Summary:   Explorer for iterated chaotic functions
 Version:   1.0.1
-Release:   9
+Release:   10
 License:   GPLv2+
 Group:     Graphics
 Source:    http://flapjack.navi.cx/releases/fyre/%{name}-%{version}.tar.bz2
@@ -10,9 +10,10 @@ Patch1: fyre-1.0.1-format-strings.patch
 URL:       http://fyre.navi.cx
 Requires(post): desktop-file-utils shared-mime-info
 Requires(postun): desktop-file-utils shared-mime-info
-BuildRequires: gtk2-devel OpenEXR-devel
+BuildRequires: pkgconfig(gtk+-2.0)
+BuildRequires: OpenEXR-devel
 BuildRequires: pkgconfig(libglade-2.0)
-BuildRequires: libgnet2-devel
+BuildRequires: pkgconfig(gnet-2.0)
 BuildRequires: desktop-file-utils shared-mime-info
 BuildRequires: automake1.9
 
@@ -36,17 +37,15 @@ automake-1.9
 %make
 
 %install
-rm -rf %buildroot
 %makeinstall update_xdgmime=true
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="X-MandrivaLinux-Multimedia-Graphics" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+  --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-rm -f %buildroot%{_datadir}/icons/hicolor/icon-theme.cache
+rm -f %{buildroot}%{_datadir}/icons/hicolor/icon-theme.cache
 
 %clean
-rm -rf %buildroot
 
 %post
 %update_mime_database
@@ -59,7 +58,6 @@ rm -rf %buildroot
 %clean_icon_cache hicolor
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog README TODO
 %{_bindir}/fyre
 %{_datadir}/applications/fyre.desktop
