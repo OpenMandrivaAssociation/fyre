@@ -7,7 +7,7 @@ Group:     Graphics
 Source:    http://flapjack.navi.cx/releases/fyre/%{name}-%{version}.tar.bz2
 Patch: fyre-1.0.0-datadir.patch
 Patch1: fyre-1.0.1-format-strings.patch
-URL:       http://fyre.navi.cx
+URL:       https://fyre.navi.cx
 Requires(post): desktop-file-utils shared-mime-info
 Requires(postun): desktop-file-utils shared-mime-info
 BuildRequires: pkgconfig(gtk+-2.0)
