@@ -10,6 +10,9 @@ Patch1: fyre-1.0.1-format-strings.patch
 URL:       https://fyre.navi.cx
 Requires(post): desktop-file-utils shared-mime-info
 Requires(postun): desktop-file-utils shared-mime-info
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: OpenEXR-devel
 BuildRequires: pkgconfig(libglade-2.0)
